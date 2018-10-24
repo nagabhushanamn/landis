@@ -23,13 +23,13 @@
 // 1. function declaration
 //-------------------------------------------------------
 
-// console.log(add(12, 13));
+/* console.log(add(12, 13));
 
-// function add(n1, n2) {
-//     return n1 + n2;
-// }
+function add(n1, n2) {
+    return n1 + n2;
+}
 
-//console.log(add(12, 13));
+console.log(add(12, 13)); */
 
 
 //-------------------------------------------------------
@@ -39,9 +39,9 @@
 //-------------------------------------------------------
 // 2. function expression / anonymous-function 
 //-------------------------------------------------------
-// console.log(add(12, 13)); // error
-// let add = function (n1, n2) { return n1 + n2 }
-// console.log(add(12, 13));
+/* console.log(add(12, 13)); // error
+let add = function (n1, n2) { return n1 + n2 }
+console.log(add(12, 13)); */
 
 
 
@@ -49,26 +49,26 @@
 // function parameters
 //-------------------------------------------------------
 
-// function func(a,b,c) {
-//     console.dir(arguments[0]);
-//     console.dir(arguments[1]);
-//     console.dir(arguments[2]);
-// }
-// func()
-// func(12);
-// func(12, 13, 14)
+/* function func(a,b,c) {
+    console.dir(arguments[0]);
+    console.dir(arguments[1]);
+    console.dir(arguments[2]);
+}
+func()
+func(12);
+func(12, 13, 14) */
 
 
 
 //  can we overload functions?  No
 
-// function getFood() {
-//     return "No Food"
-// }
-// function getFood(pay) {
-//     if (arguments.length === 0) return "get out"
-//     return "Biryani"
-// }
+/* function getFood() {
+    return "No Food"
+}
+function getFood(pay) {
+    if (arguments.length === 0) return "get out"
+    return "Biryani"
+} */
 
 // console.log(getFood())
 
@@ -76,18 +76,18 @@
 // function with default params  & rest params ( es6 )
 //-------------------------------------------------------
 
-// function func(a = 1, b = 2, ...rest) {
-//     // if (!a) a = 1
-//     // if (!b) b = 2
-//     // or
-//     // a = a || 1;
-//     // b = b || 2;
-//     console.log(a);
-//     console.log(b);
-//     console.log(Array.isArray(rest))
-//     console.log(rest)
-// }
-// func(undefined, 20, 30, 40);
+/* function func(a = 1, b = 2, ...rest) {
+    // if (!a) a = 1
+    // if (!b) b = 2
+    // or
+    // a = a || 1;
+    // b = b || 2;
+    console.log(a);
+    console.log(b);
+    console.log(Array.isArray(rest))
+    console.log(rest)
+}
+func(undefined, 20, 30, 40); */
 
 
 
@@ -111,52 +111,52 @@ in .js-lang,
 // - A function can be stored in a variable or value
 //-------------------------------------------------------
 
-// function greet() {
-//     console.log("hello");
-// }
+/* function greet() {
+    console.log("hello");
+}
 
-// let sayHello = greet;
-// sayHello();
+let sayHello = greet;
+sayHello(); */
 
 //-------------------------------------------------------
 // - A parameter of a function can be a function
 //-------------------------------------------------------
 
-// function greet(f) {
-//     if (f) {
-//         f(); return
-//     }
-//     console.log("Hello...");
-// }
-// greet();
-// let hi = function () { console.log("Namasthe") }
-// let tn = function () { console.log("Vanakkam") }
-// greet(hi)
-// greet(tn)
+/* function greet(f) {
+    if (f) {
+        f(); return
+    }
+    console.log("Hello...");
+}
+greet();
+let hi = function () { console.log("Namasthe") }
+let tn = function () { console.log("Vanakkam") }
+greet(hi)
+greet(tn) */
 
 // e.g
-// let nums = [1, 3, 5, 7, 9, 2, 4, 6, 8, 10];
-// // nums.sort();
-// let asc = function (x, y) { return x - y }
-// nums.sort(asc);
-// let desc = function (x, y) { return y - x }
-// nums.sort(desc);
+/* let nums = [1, 3, 5, 7, 9, 2, 4, 6, 8, 10];
+// nums.sort();
+let asc = function (x, y) { return x - y }
+nums.sort(asc);
+let desc = function (x, y) { return y - x }
+nums.sort(desc); */
 
 
 //-------------------------------------------------------
 // - The return value of a function can be a function
 //-------------------------------------------------------
 
-// function teach() {
-//     console.log('teaching...');
-//     let learn = function () { console.log('learning...') }
-//     console.log('teaching...ends');
-//     return learn;
-// }
+/* function teach() {
+    console.log('teaching...');
+    let learn = function () { console.log('learning...') }
+    console.log('teaching...ends');
+    return learn;
+}
 
-// let learnFunc = teach();
-// learnFunc()
-// learnFunc();
+let learnFunc = teach();
+learnFunc()
+learnFunc(); */
 
 
 //-------------------------------------------------------
@@ -183,20 +183,21 @@ even after the parent function has closed
 
 */
 
-// function teach(sub) {
-//     console.log(`teaching ${sub}`)
-//     let notes = `${sub}-notes`
-//     let fun = "bla bla bla"
-//     function learn() {
-//         console.log(`learning with ${notes}`);
-//     }
-//     //learn();
-//     console.log('teaching ends');
-//     return learn;
-// }
+/* function teach(sub) {
+    console.log(`teaching ${sub}`)
+    let notes = `${sub}-notes`
+    let fun = "bla bla bla"
+    function learn() {
+        console.log(`learning with ${notes}`);
+    }
+    //learn();
+    console.log('teaching ends');
+    return learn;
+} 
 
-// let learnFunc = teach('.js');
-// learnFunc();
+let learnFunc = teach('.js');
+learnFunc();
+*/
 
 
 
@@ -219,7 +220,7 @@ even after the parent function has closed
 
 // self-executable function  // IIFE  ==> module-design pattern
 
-const counter = (function() {
+/* const counter = (function() {
     let count = 0; // private
     function doCount() {
         count++
@@ -231,7 +232,7 @@ const counter = (function() {
         inc: doCount,
         get: getCount
     }
-})()
+})() */
 
 
 //------------------------------------------------------

@@ -1,0 +1,13 @@
+
+
+ES6
+-------------
+
+    New-syntax
+    -----------
+
+    1. let & const keywords with block-scope
+    2. string interpolation
+    3. function with default & rest params
+    4. OOP with class syntax
+    
