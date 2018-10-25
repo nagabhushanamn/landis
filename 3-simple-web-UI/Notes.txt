@@ -1,0 +1,112 @@
+
+
+web UI
+----------
+
+  1. content  ==> HTML
+  2. style    ==> CSS
+  3. dynamic data/behavior ==> javascript 
+
+
+what .js-lang can do on HTML-page in browser envi?
+
+
+using browser provided web-APIs,
+JavaScript-lang can bring any dynamic activity/data to web-page
+
+
+browser-APIs :  ==> are based on 'w3c' recommendations ,
+they are implemented nativly by browser & abstracted as JavaScript objects & functions
+
+
+
+browser-APIs  :
+    ==> DOM, XHR,Timer,....
+
+using DOM API
+---------------
+ -> can create,retreive,update,delete HTML elements
+ -> can change element's inner text/html content 
+ -> can change element's attributes/properties
+ -> can change element's styles ( css )
+ -> can listen events
+ -> can validate form-fields before submit to server-program
+ -> can create rich UI-components like
+ ....
+
+using Timer API
+----------------
+ -> can execute any action on timeout/time-interval
+
+using XHR API
+--------------
+ -> can communicate with server-side programs async 
+
+HTML 5 APIs
+--------------
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
+
+
+
+
+
+problems  with plain-js ( your-code ) with browser apis
+--------------------------------------------------------- 
+
+=> browser compatability issues
+=> memory managemt is manual  ( i.e clean un-used DOM elements)
+=> performance issues  ( i.e DOM access should.must be minimal )
+=> data-binding is manual
+=> too much code even for simple operations
+=> code organization is difficult
+
+
+soln:
+
+    ==> server-side page techonologies
+
+      i.e JSP,ASP,PHP,Freemarker,....
+
+        problems
+        ---------
+        => on every request, server-programs need to re-construct same UI layout with new content,
+           keeping client state
+        => on every request, server programs txring same resources, this will increase n/w bandwidth
+        => on every response, browser reloads current page with new-page 
+
+
+best-soln:
+
+    => using third-party's .js lib & F.Ws
+
+
+    1. jQuery
+
+       => DOM/Async http-req utility lib
+
+
+    MVC/MVVM based lib & F.Ws    
+
+    1. knockout.js
+    2. Backbone.js
+    3. Ember.js
+    4. Angular.js  ==> google-team
+    5. DOJO
+    6. ExtJS from sencha
+    ...
+
+
+    w3c ==> component based spec ( draft )
+
+    1. React.js  : v16  
+    2. Angular   : v6
+    3. Vue.js
+    4. Polymer.js
+    5. Aurelia.js
+    6. Ember.js
+
+
+  -----------------------------------
+
+       
+
