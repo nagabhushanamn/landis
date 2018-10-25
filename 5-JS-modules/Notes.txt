@@ -1,0 +1,84 @@
+
+
+---------------------------------------------------------------
+
+.js-developement without module standards & loaders
+
+    problems:
+
+    => global naming collisions
+    => loading dependency modules in order
+
+---------------------------------------------------------------
+
+    using third-party's module standards
+
+    1. AMD ( Async Module Definition )
+    2. UMD
+    3. commonJS
+
+
+ --------------------------------------------------------------- 
+ commonJS   module standards
+ ---------------------------------------------------------------
+
+ Rules:
+
+    ==> every .js is module by default
+    ==> all var & function in .js file are private by default
+    ==> to abstract/export any member(s) , use 'module.exports' object
+    ==> to require/import any module , use 'require()'
+    ==> group related modules into package with description file ( package.json)
+
+
+imp-note: Node.js runtime implemented this as default module-standards
+
+-----------------------------------------------------------------  
+
+
+NPM ( Node Package Manager)
+
+
+    - cli tool
+    - part of Node.js runtime
+
+
+    why we need ?
+
+    ->  to publish/install .js-packages from NPm repository
+    ->  to manage build-cycle
+
+
+
+------------------------------------------
+
+when developing fron-end appln, what we need to build ?
+
+  -> Transpile
+  -> bundling
+  -> linting
+  -> testing
+  ....
+
+How ?
+    
+  using build-tools
+
+    -> grunt
+    -> gulp
+    -> webpack
+------------------------------------------
+
+
+
+ --------------------------------------------------------------- 
+ ES module standards
+ ---------------------------------------------------------------
+
+ Rules:
+
+    ==> every .js is module by default
+    ==> all var & function in .js file are private by default
+    ==> to abstract/export any member(s) , use 'export' keyword
+    ==> to require/import any module , use 'import' keyword
+    ==> group related modules into package with description file ( package.json)
